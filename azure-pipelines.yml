@@ -13,11 +13,11 @@ pool:
 steps:
   - task: PowerShell@2
     inputs:
-      - targetType: 'inline'
-      - script: |
-          $version = [xml](Get-Content IATec.Shared.Domain.csproj)
-          $packageVersion = $version.Project.PropertyGroup.Version
-          Write-Host "##vso[task.setvariable variable=packageVersion]$packageVersion"
+      targetType: 'inline'
+      script: |
+        $version = [xml](Get-Content  IATec.Shared.Domain.csproj)
+        $packageVersion = $version.Project.PropertyGroup.Version
+        Write-Host "##vso[task.setvariable variable=packageVersion]$packageVersion"
     displayName: 'Get project version'
 
   - script: dotnet build --configuration Release
