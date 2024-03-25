@@ -10,6 +10,9 @@ trigger:
 pool:
   name: IATec-Builds-Agents
 
+variables:
+  buildConfiguration: 'Release'
+  
 steps:
   - task: PowerShell@2
     inputs:
@@ -20,7 +23,7 @@ steps:
         Write-Host "##vso[task.setvariable variable=packageVersion]$packageVersion"
     displayName: 'Get project version'
 
-  - script: dotnet build --configuration Release
+  - script: dotnet build --configuration $(buildConfiguration)
     displayName: 'Dotnet build'
 
   - task: NuGetCommand@2
