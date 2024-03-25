@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IATec.Shared.Domain", "IATec.Shared.Domain\IATec.Shared.Domain.csproj", "{6C8DD48F-9B0C-4FFC-B2BD-FFD76FD25E2A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IATec.Shared.Domain", "IATec.Shared.Domain.csproj", "{6C8DD48F-9B0C-4FFC-B2BD-FFD76FD25E2A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
