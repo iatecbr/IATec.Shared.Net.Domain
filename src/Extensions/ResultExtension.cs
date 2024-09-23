@@ -37,4 +37,9 @@ public static class ResultExtension
     {
         return result.HasError<BadRequestFieldsError>();
     }
+    
+    public static bool IsServiceUnavailableError(this ResultBase result)
+    {
+        return result.HasError<ServiceUnavailableError>();
+    }
 }

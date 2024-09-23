@@ -3,7 +3,7 @@ using IATec.Shared.Domain.Identifies.Contexts;
 
 namespace IATec.Shared.Domain.Results.Errors.Base;
 
-public class BadRequestFieldsError : Error, IError
+public class BadRequestFieldsError : Error
 {
     protected BadRequestFieldsError(string messageKey, ContextType type, string entityName,
         Dictionary<string, object>? valueParams = null)
