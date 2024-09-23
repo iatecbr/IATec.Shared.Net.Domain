@@ -2,14 +2,14 @@ namespace IATec.Shared.Domain.Models.LoggingAggregate.Dtos;
 
 public record LogDto
 {
-    public string Id { get; init; }
-    public string ContainerKey { get; init; }
-    public string Source { get; init; }
-    public string Owner { get; init; }
-    public string Action { get; init; }
-    public string UserId { get; init; }
-    public DateTime Date { get; init; }
-    public string Content { get; init; }
+    public string Id { get; set; }
+    public string ContainerKey { get; set; }
+    public string Source { get; set; }
+    public string Owner { get; set; }
+    public string Action { get; set; }
+    public string UserId { get; set; }
+    public DateTime Date { get; set; }
+    public string Content { get; set; }
 
     public LogDto(string id, string containerKey, string source, string owner, string action, string userId,
         DateTime date, string content)
