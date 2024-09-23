@@ -11,6 +11,10 @@ public record LogDto
     public DateTime Date { get; set; }
     public string Content { get; set; }
 
+    public LogDto()
+    {
+    }
+
     public LogDto(string id, string containerKey, string source, string owner, string action, string userId,
         DateTime date, string content)
     {
