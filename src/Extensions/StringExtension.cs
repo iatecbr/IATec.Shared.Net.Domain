@@ -7,7 +7,7 @@ public static class StringExtension
 {
     public static string AppendString(this string stringRoot, string stringToAppend)
     {
-        return $"{stringRoot}-{stringToAppend}".ToLower();
+        return $"{stringRoot}.{stringToAppend}".ToLower();
     }
     
     public static bool HasMinhWords(this string value, int min)
