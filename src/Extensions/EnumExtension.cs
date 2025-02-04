@@ -8,10 +8,17 @@ public static class EnumExtension
     {
         return propertyExpression.Body switch
         {
-            MemberExpression member => member.Member.Name.Replace("Enum", "Id"),
+            MemberExpression member => ProcessPropertyName(member.Member.Name),
             UnaryExpression {Operand: MemberExpression memberExpression} =>
-                memberExpression.Member.Name.Replace("Enum", "Id"),
+                ProcessPropertyName(memberExpression.Member.Name),
             _ => throw new ArgumentException("The expression does not refer to a property.")
         };
+    }
+
+    private static string ProcessPropertyName(string propertyName)
+    {
+        return propertyName.EndsWith("Enum") 
+            ? propertyName.Replace("Enum", "Id") 
+            : propertyName + "Id";
     }
 }
