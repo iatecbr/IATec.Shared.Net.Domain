@@ -42,4 +42,9 @@ public static class ResultExtension
     {
         return result.HasError<ServiceUnavailableError>();
     }
+
+    public static bool IsInternalServerError(this ResultBase result)
+    {
+        return result.HasError<InternalServerError>();
+    }
 }
