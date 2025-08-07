@@ -20,4 +20,5 @@ public static class DefaultErrorMessageKeys
     public const string InvalidIdMessageKey = $"{InitialPath}invalid-id";
     public const string InvalidDateMessageKey = $"{InitialPath}invalid-date";
     public const string ServiceUnavailableMessageKey = $"{InitialPath}service-unavailable";
+    public const string InternalServerErrorMessageKey = $"{InitialPath}internal-server-error";
 }
