@@ -3,7 +3,6 @@ using IATec.Shared.Domain.Messages;
 
 namespace IATec.Shared.Domain.Results.Errors.Default;
 
-public sealed class InternalServerError : Error
-{
-    public InternalServerError(string? message = null) : base(message ?? DefaultErrorMessageKeys.InternalServerErrorMessageKey) { }
-}
+public sealed class InternalServerError(
+    string? message = null) : Error(message ?? DefaultErrorMessageKeys.InternalServerErrorMessageKey)
+{ }
