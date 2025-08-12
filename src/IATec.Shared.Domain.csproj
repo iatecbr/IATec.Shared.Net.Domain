@@ -6,7 +6,7 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <PackageId>IATec.Shared.Domain</PackageId>
-        <Title>IATec.Shared.Domain</Title>
+        <Title>IATec Shared Domain</Title>
 		<Authors>IATec | Solution | Platform Team</Authors>
         <Description>Project developed to help IATec teams to develop their projects faster.</Description>
 		<Copyright>@IATec Solutions</Copyright>
