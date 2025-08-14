@@ -2,19 +2,24 @@
 
     <PropertyGroup>
         <OutputType>Library</OutputType>
-        <TargetFramework>net8.0</TargetFramework>
+        <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <PackageId>IATec.Shared.Domain</PackageId>
-        <Authors>Architecture Team</Authors>
+        <Title>IATec Shared Domain</Title>
+		<Authors>IATec | Solution | Platform Team</Authors>
         <Description>Project developed to help IATec teams to develop their projects faster.</Description>
-        <Copyright>@IATec</Copyright>
-        <RootNamespace>IATec.Shared.Domain</RootNamespace>
-        <Version>1.0.0</Version>
-        <PackageIconUrl>https://assets-services-dev.sdasystems.org/images/icons/standard.library.icon.png</PackageIconUrl>
-        <PackageIcon>icon.png</PackageIcon>
+		<Copyright>@IATec Solutions</Copyright>
+		<RootNamespace>IATec.Shared.Domain</RootNamespace>
+        <Version>1.0.1</Version>
+		<PackageIconUrl>https://assets-services-dev.sdasystems.org/images/icons/standard.library.icon.png</PackageIconUrl>
+		<PackageIcon>icon.png</PackageIcon>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    </PropertyGroup>
+		<PackageProjectUrl>https://github.com/iatecbr/IATec.Shared.Net.Domain</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/iatecbr/IATec.Shared.Net.Domain</RepositoryUrl>
+		<RepositoryType>Git</RepositoryType>
+		<PackageTags>net</PackageTags>
+	</PropertyGroup>
 
     <ItemGroup>
         <PackageReference Include="FluentResults" Version="3.16.0"/>
