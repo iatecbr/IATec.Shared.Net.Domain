@@ -4,5 +4,8 @@ using IATec.Shared.Domain.Results.Errors.Base;
 
 namespace IATec.Shared.Domain.Results.Errors.Default;
 
+/// <summary>
+/// Represents an error that occurs when an entity is not found.
+/// </summary>
 public class EntityNotFoundError(string entity)
-    : BadRequestFieldsError(DefaultErrorMessageKeys.EmptyFieldMessageKey, ContextType.Domain, entity);
+    : BadRequestFieldsError(DefaultErrorMessageKeys.EmptyFieldMessageKey, ContextType.Domain, entity, new());
