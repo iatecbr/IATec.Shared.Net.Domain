@@ -4,6 +4,9 @@ using IATec.Shared.Domain.Results.Errors.Base;
 
 namespace IATec.Shared.Domain.Results.Errors.Default;
 
+/// <summary>
+/// Represents an error that occurs when a field value length is outside the allowed range.
+/// </summary>
 public class InvalidLengthError(
     string entity,
     string fieldName,
