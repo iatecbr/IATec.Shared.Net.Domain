@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.0.0] - 2025-05-20
+## [2.0.0] - 2026-05-20
 
 ### BREAKING CHANGES
 - `BadRequestFieldsError` constructor parameter `valueParams` changed from `Dictionary<string, object>?` (nullable) to `Dictionary<string, object>` (non-nullable). Code calling this constructor with an explicit `null` will fail to compile.
@@ -19,6 +19,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `EntityNotFoundError` now explicitly passes an empty dictionary to the base constructor.
 
 ### FIXED
+- `HasMinWords` now correctly ignores empty entries caused by multiple spaces.
+- `GetLongOrDefault` now uses `long.TryParse` to safely return 0 for invalid or non-numeric inputs instead of throwing `FormatException`.
 - Fixed malformed XML documentation tags (`<see cref="Result{T}"/>`) in `StringExtension` methods.
 - Fixed incorrect constructor summary in `BadRequestFieldsError` overload.
 

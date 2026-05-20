@@ -16,7 +16,7 @@ public static class StringExtension
     /// <returns>The concatenated string in lowercase.</returns>
     public static string AppendString(this string stringRoot, string stringToAppend)
     {
-        return $"{stringRoot}.{stringToAppend}".ToLower();
+        return $"{stringRoot}.{stringToAppend}".ToLowerInvariant();
     }
 
     /// <summary>
@@ -25,9 +25,9 @@ public static class StringExtension
     /// <param name="value">The string to evaluate.</param>
     /// <param name="min">The minimum number of words required.</param>
     /// <returns>True if the string has at least the minimum number of words; otherwise, false.</returns>
-    public static bool HasMinhWords(this string value, int min)
+    public static bool HasMinWords(this string value, int min)
     {
-        var items = value.Split(" ");
+        var items = value.Split(' ', StringSplitOptions.RemoveEmptyEntries);
         return items.Length >= min;
     }
 
@@ -48,7 +48,7 @@ public static class StringExtension
     /// <returns>The parsed long value, or 0 if parsing fails.</returns>
     public static long GetLongOrDefault(this string? value)
     {
-        return !value.HasValue() ? 0 : long.Parse(value!);
+        return value.HasValue() && long.TryParse(value!, out var result) ? result : 0;
     }
 
     /// <summary>
