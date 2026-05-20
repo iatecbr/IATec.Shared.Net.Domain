@@ -31,7 +31,7 @@ public class BadRequestFieldsError : Error
     {
         valueParams = TransformKeys(valueParams, type, entityName);
         Message = messageKey;
-        Metadata.Add("entityName", $"api.{type.Value}.entity.{entityName}.entity-name".ToLower());
+        Metadata.Add("entityName", $"api.{type.Value}.entity.{entityName}.entity-name".ToLowerInvariant());
         Metadata.Add("valueParams", valueParams);
     }
 
@@ -47,7 +47,7 @@ public class BadRequestFieldsError : Error
         Dictionary<string, object> result = new();
 
         foreach (var item in valueParams)
-            result.Add($"api.{type.Value}.entity.{entityName}.field.{item.Key}".ToLower(), item.Value);
+            result.Add($"api.{type.Value}.entity.{entityName}.field.{item.Key}".ToLowerInvariant(), item.Value);
 
         return result;
     }
