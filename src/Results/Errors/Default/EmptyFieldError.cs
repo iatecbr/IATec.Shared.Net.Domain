@@ -4,6 +4,9 @@ using IATec.Shared.Domain.Results.Errors.Base;
 
 namespace IATec.Shared.Domain.Results.Errors.Default;
 
+/// <summary>
+/// Represents an error that occurs when a required field is empty.
+/// </summary>
 public class EmptyFieldError(string entity, string fieldName, ContextType type)
     : BadRequestFieldsError(DefaultErrorMessageKeys.EmptyFieldMessageKey, type, entity,
         new Dictionary<string, object> {{fieldName, string.Empty}});

@@ -4,6 +4,9 @@ using IATec.Shared.Domain.Results.Errors.Base;
 
 namespace IATec.Shared.Domain.Results.Errors.Default;
 
+/// <summary>
+/// Represents an error that occurs when a field value is below the minimum allowed value.
+/// </summary>
 public class InvalidMinValueError(
     string entity,
     string fieldName,
