@@ -8,7 +8,7 @@ public record LogDto
     /// <summary>
     /// Gets the unique identifier of the log entry.
     /// </summary>
-    public required string Id { get; init; }
+    public string? Id { get; init; }
 
     /// <summary>
     /// Gets the container key associated with the log entry.
@@ -33,7 +33,7 @@ public record LogDto
     /// <summary>
     /// Gets the user identifier who performed the action.
     /// </summary>
-    public required string UserId { get; init; }
+    public string? UserId { get; init; }
 
     /// <summary>
     /// Gets the date and time when the log entry was created.
