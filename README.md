@@ -45,6 +45,7 @@ Error and success result classes built on top of FluentResults:
 | Class | Description |
 |-------|-------------|
 | `BadRequestFieldsError` | Base class for bad-request field validation errors |
+| `ConflictError` | Error when a conflict occurs |
 | `EmptyFieldError` | Error when a required field is empty |
 | `EntityNotFoundError` | Error when an entity is not found |
 | `InternalServerError` | Error for internal server failures |
