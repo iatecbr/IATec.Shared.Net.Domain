@@ -83,4 +83,14 @@ public static class ResultExtension
     {
         return result.HasError<InternalServerError>();
     }
+
+    /// <summary>
+    /// Determines whether the result contains a conflict error.
+    /// </summary>
+    /// <param name="result">The result to evaluate.</param>
+    /// <returns>True if the result has a conflict error; otherwise, false.</returns>
+    public static bool IsConflictError(this ResultBase result)
+    {
+        return result.HasError<ConflictError>();
+    }
 }

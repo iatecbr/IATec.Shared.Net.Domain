@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 For project overview and usage examples, see the [README](README.md) .
 
+## [2.1.0] - 2026-09-07
+
+### ADDED
+- Added `ConflictError` to represent errors where a request conflicts with the current state of a resource.
+- Added `ConflictMessageKey` to `StatusCodeMessageKeys`.
+- Added `IsConflictError` extension method to `ResultExtension`.
+
 ## [2.0.1] - 2026-05-26
 
 ### FIXED

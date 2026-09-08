@@ -36,4 +36,9 @@ public static class StatusCodeMessageKeys
     /// Message key for an external server error status code.
     /// </summary>
     public const string ExternalServerErrorMessageKey = $"{InitialPath}external-server-error";
+
+    /// <summary>
+    /// Message key for a conflict status code.
+    /// </summary>
+    public const string ConflictMessageKey = $"{InitialPath}conflict";
 }
